@@ -1,6 +1,7 @@
 ﻿using Core.Enums;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Text.Json.Serialization;
 
 namespace Core.Entities
 {
@@ -21,6 +22,7 @@ namespace Core.Entities
         [BsonElement("breed")]
         public string Breed { get; set; }
 
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         [BsonElement("status")]
         public Status Status { get; set; }
 
