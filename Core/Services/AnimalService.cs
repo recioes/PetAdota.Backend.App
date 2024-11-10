@@ -81,7 +81,7 @@ namespace Core.Services
                 throw new InvalidOperationException("Animal not found.");
             }
 
-            var mappedAnimal = animalDto.Create();
+            animalDto.Update(animal);
 
             var validationResult = await _animalValidator.ValidateAsync(animal);
             if (!validationResult.IsValid)

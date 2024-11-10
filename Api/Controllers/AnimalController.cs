@@ -22,7 +22,7 @@ namespace Api.Controllers
         public async Task<IActionResult> CreateAnimal([FromBody] AnimalDto animal)
         {
             await _animalService.CreateAsync(animal);
-            return Ok("Animal created");
+            return Ok("Animal record created");
         }
 
         [HttpPut("{id}")]
@@ -30,7 +30,7 @@ namespace Api.Controllers
         public async Task<IActionResult> UpdateAnimal([FromRoute] ObjectId id, [FromBody] AnimalDto animalDto)
         {
             await _animalService.UpdateAsync(id, animalDto);
-            return Ok("Animal updated");
+            return Ok("Animal record updated");
         }
 
         [HttpDelete("{id}")]
