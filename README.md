@@ -40,15 +40,18 @@ O projeto "PetAdota Backend API" é uma aplicação desenvolvida em C#, para a m
 ## ⚙️ Configurações
 
 <ul>
-  <li><b>Banco de Dados MongoDB</b>: Para utilizar este repositório, é necessário configurar um banco de dados MongoDB com uma collection apropriada para armazenar os dados dos animais. Certifique-se de que o banco e a collection estejam criados antes de executar a aplicação.</li>
-  <li><b>Variáveis de Ambiente</b>: Configure as variáveis de ambiente no Windows para acessar a conexão com o MongoDB. As variáveis devem incluir pelo menos o nome do banco de dados e a string de conexão. Exemplo de variável:
+  <li><b>Banco de Dados MongoDB</b>: Para utilizar este repositório, é necessário configurar um banco de dados MongoDB com uma collection apropriada para armazenar os dados dos animais. Certifique-se de que o banco de dados e a collection estejam criados antes de executar a aplicação.</li>
+  <li><b>Variáveis de Ambiente</b>: Configure as variáveis de ambiente no Windows para acessar a conexão com o MongoDB. As variáveis devem incluir:
     <ul>
       <li><code>Mongo_Animal_Db</code> - Nome do banco de dados MongoDB.</li>
+      <li><code>Mongo_Collection_Name</code> - Nome da collection que será usada para armazenar os dados dos animais.</li>
       <li><code>Mongo_Connection_String</code> - String de conexão para o MongoDB.</li>
     </ul>
   </li>
+  <li><b>IDE Recomendada</b>: É recomendável utilizar o Visual Studio Community para rodar e desenvolver o projeto, pois ele oferece um ambiente completo com suporte a .NET, facilitando a execução e o debug da aplicação.</li>
   <li><b>Swagger</b>: A documentação da API pode ser acessada via <code>/swagger</code>, permitindo a fácil visualização e teste dos endpoints diretamente no navegador.</li>
 </ul>
+
 
 ## 📚 Camadas do Projeto
 
