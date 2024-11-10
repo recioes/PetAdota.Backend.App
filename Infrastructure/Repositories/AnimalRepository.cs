@@ -8,15 +8,15 @@ namespace Infrastructure.Repositories
 {
     public class AnimalRepository : IAnimalRepository
     {
-        private readonly IMongoCollection<Animal> _schedules;
+        private readonly IMongoCollection<Animal> _animals;
 
         public AnimalRepository(IMongoCollectionFactory<Animal> collectionFactory)
         {
-            _schedules = collectionFactory.GetCollection();
+            _animals = collectionFactory.GetCollection();
         }
-        public async Task AddAsync(Animal schedule)
+        public async Task AddAsync(Animal animal)
         {
-            await _schedules.InsertOneAsync(schedule);
+            await _animals.InsertOneAsync(animal);
         }
 
         public async Task DeleteAsync(ObjectId id)
@@ -25,24 +25,24 @@ namespace Infrastructure.Repositories
                 .Filter
                 .Eq(s => s.Id, id);
 
-            await _schedules.DeleteOneAsync(filter);
+            await _animals.DeleteOneAsync(filter);
         }
 
         public async Task<IEnumerable<Animal>> GetAsync()
         {
-            return await _schedules.Find(FilterDefinition<Animal>.Empty).ToListAsync();
+            return await _animals.Find(FilterDefinition<Animal>.Empty).ToListAsync();
         }
 
         public async Task<Animal> GetByIdAsync(ObjectId id)
         {
             var filter = Builders<Animal>.Filter.Eq(s => s.Id, id);
-            return await _schedules.Find(filter).FirstOrDefaultAsync();
+            return await _animals.Find(filter).FirstOrDefaultAsync();
         }
 
-        public async Task UpdateAsync(Animal schedule)
+        public async Task UpdateAsync(Animal animal)
         {
-            var filter = Builders<Animal>.Filter.Eq(s => s.Id, schedule.Id);
-            await _schedules.ReplaceOneAsync(filter, schedule);
+            var filter = Builders<Animal>.Filter.Eq(s => s.Id, animal.Id);
+            await _animals.ReplaceOneAsync(filter, animal);
         }
     }
 }

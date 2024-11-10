@@ -17,7 +17,7 @@ namespace Infrastructure.Factories
 
         public IMongoCollection<T> GetCollection()
         {
-            var database = _mongoClient.GetDatabase(_envProvider.Mongo_Db_Name);
+            var database = _mongoClient.GetDatabase(_envProvider.Mongo_Animal_Db);
 
             return database.GetCollection<T>(typeof(T).Name.ToLower());
         }
