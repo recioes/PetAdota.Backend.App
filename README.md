@@ -41,7 +41,7 @@ O projeto "PetAdota Backend API" é uma aplicação desenvolvida em C#, para a m
 
 <ul>
   <li><b>Banco de Dados MongoDB</b>: para utilizar este repositório é necessário configurar um banco de dados MongoDB com uma collection apropriada para armazenar os dados dos animais. Certifique-se de que o banco de dados e a collection estejam criados antes de executar a aplicação.</li>
-  <li><b>Variáveis de Ambiente</b>: Configure as variáveis de ambiente no Windows para acessar a conexão com o MongoDB. As variáveis devem incluir:
+  <li><b>Variáveis de Ambiente</b>: configure as variáveis de ambiente no Windows para acessar a conexão com o MongoDB. As variáveis devem incluir:
     <ul>
       <li><code>Mongo_Animal_Db</code> - nome do banco de dados MongoDB.</li>
       <li><code>Mongo_Collection_Name</code> - nome da collection que será usada para armazenar os dados dos animais.</li>
