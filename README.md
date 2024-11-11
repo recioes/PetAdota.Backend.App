@@ -44,7 +44,7 @@ O projeto "PetAdota Backend API" é uma aplicação desenvolvida em C#, para a m
   <li><b>Variáveis de Ambiente</b>: configure as variáveis de ambiente no Windows para acessar a conexão com o MongoDB. As variáveis devem incluir:
     <ul>
       <li><code>Mongo_Animal_Db</code> - nome do banco de dados MongoDB.</li>
-      <li><code>Mongo_Collection_Name</code> - nome da collection que será usada para armazenar os dados dos animais.</li>
+      <li><code>Mongo_Animal_Collection</code> - nome da collection que será usada para armazenar os dados dos animais. O valor desta variável deve ser especificamente <code>animal</code>.</li>
       <li><code>Mongo_Connection_String</code> - string de conexão para o MongoDB.</li>
     </ul>
   </li>
